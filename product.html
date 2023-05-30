@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Card Designs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">ECOMMERCE</a>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+
+            <div class="cart">
+                <i class='bx bx-x' id="close-cart"></i>
+                <h2 class="cart-title">YOUR CART</h2>
+                <div class="cart-content">
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <button type="button" class="btn-buy">Buy Now</button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+
+        <div class="shop-content" >
+            <div class="Product-box">
+                <img src="shoes.jpg" class="Product-img">
+                <h2 class="Product-title">SHOES</h2>
+                <span class="price">$25</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+            <div class="Product-box">
+                <img src="watch.jpg" class="Product-img">
+                <h2 class="Product-title">WATCH</h2>
+                <span class="price">$100</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+            <div class="Product-box">
+                <img src="phone.jpg" class="Product-img">
+                <h2 class="Product-title">PHONE</h2>
+                <span class="price">$1000</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+            <div class="Product-box">
+                <img src="shirt.jpg" class="Product-img">
+                <h2 class="Product-title">TSHIRT</h2>
+                <span class="price">$200</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+            <div class="Product-box">
+                <img src="bottle.jpg" class="Product-img">
+                <h2 class="Product-title">BOTTLE</h2>
+                <span class="price">$200</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+            <div class="Product-box">
+                <img src="perfume.jpg" class="Product-img">
+                <h2 class="Product-title">PERFUME</h2>
+                <span class="price">$200</span>
+                <button class="buy-btn" onclick="addCartClicked(event)">Buy</button>
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>
