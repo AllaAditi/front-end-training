@@ -21,13 +21,9 @@ function ready() {
         button.addEventListener("click", removeCartItem);
     }
 
-    var quantityInputs = document.getElementsByClassName('cart-quantity');
-    for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[i];
-        input.addEventListener('change', quantityChanged);
-    }
 
-    var buyButtons = document.getElementsByClassName('buy-btn');
+
+    var buyButtons = document.getElementsByClassName('btn-buy');
     for (var i = 0; i < buyButtons.length; i++) {
         var button = buyButtons[i];
         button.addEventListener("click", addCartClicked);
@@ -45,6 +41,7 @@ function quantityChanged(event) {
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
+
     updateTotal();
 }
 
@@ -79,16 +76,24 @@ function addProductToCart(title, price, productImg) {
                     <div class="cart-price">${price}</div>
                     <input type="number" value="1" class="cart-quantity">
                 </div>
-                <i class='bx bxs-trash-alt cart-remove' onclick="removeCartItem(event)"></i>
+                <i class='bx bxs-trash-alt cart-remove delete-item-cart' onclick="removeCartItem(event)"></i>
             `;
     cartBox.innerHTML = cartBoxHTML;
     cartContent.appendChild(cartBox);
 
+    var quantityInputs = document.getElementsByClassName('cart-quantity');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityChanged);
+    }
+
+    
     var removeCartButtons = cartBox.getElementsByClassName('cart-remove');
     for (var i = 0; i < removeCartButtons.length; i++) {
         var button = removeCartButtons[i];
         button.addEventListener("click", removeCartItem);
     }
+    updateTotal();
 }
 
 function updateTotal() {
@@ -104,4 +109,4 @@ function updateTotal() {
         total += price * quantity;
     }
     document.getElementsByClassName('total-price')[0].innerText = '$' + total;
-}
+} 

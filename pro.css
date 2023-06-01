@@ -10,12 +10,14 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     background-color: #0c3939;
+    
 }
 
 :root {
     --bg-color: #91bcd7;
     --text-color: #fff;
-    --main-color: #2e283b;
+    --main-color: blue
+    ;
 
 }
 img{
@@ -112,6 +114,7 @@ header{
 }
 .cart-quantity{
     border: 1px solid var(--text-color);
+    color: aqua;
     outline-color: var(--main-color);
     width: 2.4rem;
     text-align: center;
@@ -119,7 +122,7 @@ header{
 }
 .cart-remove{
     font-size: 24px;
-    color: var(--main-color);
+    color: #fff;
     cursor: pointer;
 }
 .total{
@@ -138,13 +141,12 @@ header{
 }
 .btn-buy{
     display: flex;
-    margin: 1.5rem auto 0 auto;
-    padding: 12px 20px;
-    border: none;
-    background: var(--main-color);
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    padding:12px 10px;
+    background:rgb(59, 134, 110);
     color: var(--bg-color);
-    font-size: 1rem;
-    font-weight: 500;
     cursor: pointer;
 }
 .btn-buy:hover{
@@ -179,6 +181,9 @@ header{
 }
 .product-box{
     position: relative;
+    max-width: 100px;
+    max-height: 100px;
+
 }
 .product-box:hover{
     padding: 10px;
@@ -187,7 +192,7 @@ header{
 }
 .Product-img{
     width: 400px;
-    height: auto;
+    height: 400px;
     object-fit: cover;
     margin-bottom: 0.5rem;
 
@@ -217,7 +222,9 @@ header{
 
 }
 
-
+.delete-item-cart{
+    width: 10px;
+}
 
 
 
